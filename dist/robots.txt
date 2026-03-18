@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales
+Disallow: /politique-confidentialite
+Disallow: /politique-cookies
+
+Sitemap: https://www.adconceptdesign.fr/sitemap.xml
