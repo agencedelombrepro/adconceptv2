@@ -9,14 +9,19 @@ interface CityPageProps {
 }
 
 const cityImages: Record<string, string> = {
-  valbonne:     '/valbonne-ville.jpg',
-  cannes:       '/cannes-ville.jpg',
-  mougins:      '/mougins-ville.jpg',
-  antibes:      '/antibes-ville.jpg',
-  nice:         '/nice-ville.jpg',
-  monaco:       '/monaco-ville.jpg',
-  'saint-tropez': '/saint-tropez-ville.jpg',
-  grasse:       '/grasse-ville.jpg',
+  valbonne:        '/valbonne-ville.jpg',
+  cannes:          '/cannes-ville.jpg',
+  mougins:         '/mougins-ville.jpg',
+  antibes:         '/antibes-ville.jpg',
+  nice:            '/nice-ville.jpg',
+  monaco:          '/monaco-ville.jpg',
+  'saint-tropez':  '/saint-tropez-ville.jpg',
+  grasse:          '/grasse-ville.jpg',
+  frejus:          '/frejus-ville.jpg',
+  hyeres:          '/hyeres-ville.jpg',
+  grimaud:         '/grimaud-ville.jpg',
+  'sainte-maxime': '/sainte-maxime-ville.jpg',
+  sanary:          '/sanary-ville.jpg',
 }
 
 export function CityPage({ cityName, slug }: CityPageProps) {
@@ -40,7 +45,7 @@ export function CityPage({ cityName, slug }: CityPageProps) {
               Zone d'intervention
             </span>
             <h1 className="text-primary-foreground mb-4">
-              Architecte d'intérieur<br />
+              Architecte & Maître d'Œuvre<br />
               <em>à {cityName}</em>
             </h1>
             <p className="text-white/70 text-sm tracking-wider">
@@ -233,14 +238,19 @@ export function CityPage({ cityName, slug }: CityPageProps) {
           <p className="text-xs text-muted-foreground mb-4 tracking-wider uppercase">Zones proches</p>
           <div className="flex flex-wrap gap-3">
             {[
-              { city: 'Valbonne',     to: '/architecte-interieur-valbonne' },
-              { city: 'Cannes',       to: '/architecte-interieur-cannes' },
-              { city: 'Mougins',      to: '/architecte-interieur-mougins' },
-              { city: 'Antibes',      to: '/architecte-interieur-antibes' },
-              { city: 'Nice',         to: '/architecte-interieur-nice' },
-              { city: 'Monaco',       to: '/architecte-interieur-monaco' },
-              { city: 'Saint-Tropez', to: '/architecte-interieur-saint-tropez' },
-              { city: 'Grasse',       to: '/architecte-interieur-grasse' },
+              { city: 'Valbonne',       to: '/architecte-interieur-valbonne' },
+              { city: 'Cannes',         to: '/architecte-interieur-cannes' },
+              { city: 'Mougins',        to: '/architecte-interieur-mougins' },
+              { city: 'Antibes',        to: '/architecte-interieur-antibes' },
+              { city: 'Nice',           to: '/architecte-interieur-nice' },
+              { city: 'Monaco',         to: '/architecte-interieur-monaco' },
+              { city: 'Saint-Tropez',   to: '/architecte-interieur-saint-tropez' },
+              { city: 'Grasse',         to: '/architecte-interieur-grasse' },
+              { city: 'Fréjus',         to: '/architecte-interieur-frejus' },
+              { city: 'Hyères',         to: '/architecte-interieur-hyeres' },
+              { city: 'Grimaud',        to: '/architecte-interieur-grimaud' },
+              { city: 'Sainte-Maxime',  to: '/architecte-interieur-sainte-maxime' },
+              { city: 'Sanary-sur-Mer', to: '/architecte-interieur-sanary' },
             ].filter(l => !l.to.includes(slug)).map(link => (
               <Link
                 key={link.city}

@@ -13,7 +13,7 @@ const articles = [
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80&fit=crop',
     slug: 'preparer-chantier-renovation-cannes',
     content: `
-      <p>La rénovation d'un bien immobilier à Cannes — qu'il s'agisse d'un appartement en centre-ville, d'une villa sur les hauteurs ou d'une résidence proche du bord de mer — nécessite une organisation rigoureuse en amont. Trop souvent, les propriétaires sous-estiment le temps et les ressources nécessaires à une bonne préparation.</p>
+      <p>La rénovation d'un bien immobilier à Cannes (appartement en centre-ville, villa sur les hauteurs ou résidence proche du bord de mer) nécessite une organisation rigoureuse en amont. Trop souvent, les propriétaires sous-estiment le temps et les ressources nécessaires à une bonne préparation.</p>
 
       <h2>1. Définir précisément le périmètre des travaux</h2>
       <p>Avant de contacter la moindre entreprise, il est indispensable de savoir ce que vous souhaitez réaliser. Une rénovation partielle (cuisine, salle de bains) ou complète ? Une simple remise au goût du jour ou une restructuration des espaces ? Ce périmètre conditionne directement le budget, le planning et les corps de métier à mobiliser.</p>
@@ -90,11 +90,11 @@ const articles = [
     category: 'Conseils chantier',
     date: '28 février 2026',
     readTime: '4 min',
-    excerpt: "Après 20 ans de projets dans les Alpes-Maritimes, j'ai identifié les erreurs les plus courantes qui peuvent compromettre un chantier de rénovation — et comment les éviter.",
+    excerpt: "Après 20 ans de projets dans les Alpes-Maritimes, j'ai identifié les erreurs les plus courantes qui peuvent compromettre un chantier de rénovation, et comment les éviter.",
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1200&q=80&fit=crop',
     slug: 'erreurs-frequentes-renovation',
     content: `
-      <p>Après 20 ans de projets dans les Alpes-Maritimes, j'ai vu beaucoup de chantiers bien ou mal préparés. Voici les erreurs les plus fréquentes — et comment les éviter.</p>
+      <p>Après 20 ans de projets dans les Alpes-Maritimes, j'ai vu beaucoup de chantiers bien ou mal préparés. Voici les erreurs les plus fréquentes, et comment les éviter.</p>
 
       <h2>1. Lancer le chantier sans dossier technique</h2>
       <p>La première erreur est de commencer les travaux sans plans d'exécution ni descriptif détaillé. Résultat : des entreprises qui interprètent les consignes à leur manière, des travaux qui ne correspondent pas aux attentes, et des surcoûts importants.</p>

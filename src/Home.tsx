@@ -56,7 +56,7 @@ const stats = [
 ]
 
 // Animated counter
-function Counter({ target, suffix = '' }: { target: string; suffix?: string }) {
+function Counter({ target }: { target: string }) {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
   const [display, setDisplay] = useState('0')
@@ -148,14 +148,14 @@ export function Home() {
               initial={{ y: 120, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-              className="text-white text-6xl md:text-8xl lg:text-[7rem] mb-8 leading-none"
+              className="text-white text-2xl md:text-[2.1rem] lg:text-[2.8rem] mb-8 leading-none md:whitespace-nowrap"
               style={{
                 fontFamily: 'Cormorant Garamond, serif',
                 fontWeight: 300,
                 textShadow: '0 4px 32px rgba(0,0,0,0.55), 0 1px 8px rgba(0,0,0,0.4)',
               }}
             >
-              Architecte <em>d'intérieur</em>
+              Architecte & <em>Maître d'œuvre</em>
             </motion.h1>
           </div>
 
@@ -353,13 +353,13 @@ export function Home() {
             <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {realisations.map((project, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
                 <Link
                   to="/realisations"
                   data-cursor="Voir"
-                  className="group block relative overflow-hidden aspect-[4/3] rounded-sm"
+                  className="group block relative overflow-hidden aspect-[3/4] rounded-sm"
                 >
                   <img
                     src={project.image}
@@ -367,11 +367,11 @@ export function Home() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                    <span className="text-xs tracking-[0.3em] uppercase text-white/80 block mb-2">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-[9px] tracking-[0.3em] uppercase text-white/70 block mb-1">
                       {project.category} · {project.surface}
                     </span>
-                    <h3 className="text-white text-2xl" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400 }}>
+                    <h3 className="text-white text-base leading-snug" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400 }}>
                       {project.title}
                     </h3>
                     <div className="flex items-center gap-2 mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -397,23 +397,23 @@ export function Home() {
       </section>
 
       {/* ─── MISSIONS ─── */}
-      <section className="py-14 bg-background">
+      <section className="py-8 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <AnimatedSection className="mb-10">
-            <span className="text-xs tracking-[0.4em] uppercase text-secondary block mb-4">Prestations</span>
-            <h2 className="text-primary max-w-xl">Architecture d'intérieur & maîtrise d'œuvre</h2>
+          <AnimatedSection className="mb-6">
+            <span className="text-xs tracking-[0.4em] uppercase text-secondary block mb-3">Prestations</span>
+            <h2 className="text-primary whitespace-nowrap">Architecture d'intérieur & maîtrise d'œuvre</h2>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5">
             {/* Mission partielle */}
             <AnimatedSection delay={0.1} direction="left">
-              <div className="border border-border p-8 h-full group hover:border-primary transition-colors duration-300 relative overflow-hidden">
+              <div className="border border-border p-5 h-full group hover:border-primary transition-colors duration-300 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-0 bg-secondary group-hover:h-full transition-all duration-500" />
-                <span className="text-xs tracking-[0.3em] uppercase text-secondary block mb-4">Mission 01</span>
-                <h3 className="text-primary mb-6" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400, fontSize: '1.6rem' }}>
+                <span className="text-xs tracking-[0.3em] uppercase text-secondary block mb-3">Mission 01</span>
+                <h3 className="text-primary mb-4" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400, fontSize: '1.35rem' }}>
                   Mission de conception
                 </h3>
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-1.5 mb-4">
                   {[
                     'Analyse du bien existant',
                     'Avant-projets (APS)',
@@ -423,8 +423,8 @@ export function Home() {
                     'DQE (descriptif quantitatif estimatif)',
                     'Consultation des entreprises',
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-foreground/70">
-                      <CheckCircle2 size={14} className="text-secondary shrink-0" />
+                    <li key={item} className="flex items-center gap-2 text-sm text-foreground/70">
+                      <CheckCircle2 size={12} className="text-secondary shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -437,13 +437,13 @@ export function Home() {
 
             {/* Mission complète */}
             <AnimatedSection delay={0.2} direction="right">
-              <div className="bg-primary p-8 h-full group relative overflow-hidden">
+              <div className="bg-primary p-5 h-full group relative overflow-hidden">
                 <div className="absolute -right-20 -bottom-20 w-64 h-64 rounded-full bg-secondary/10" />
-                <span className="text-xs tracking-[0.3em] uppercase text-white/60 block mb-4 relative z-10">Mission 02</span>
-                <h3 className="text-primary-foreground mb-6 relative z-10" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400, fontSize: '1.6rem' }}>
+                <span className="text-xs tracking-[0.3em] uppercase text-white/60 block mb-3 relative z-10">Mission 02</span>
+                <h3 className="text-primary-foreground mb-4 relative z-10" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400, fontSize: '1.35rem' }}>
                   Mission complète : conception & maîtrise d'œuvre
                 </h3>
-                <ul className="space-y-3 mb-6 relative z-10">
+                <ul className="space-y-1.5 mb-4 relative z-10">
                   {[
                     'Conception intégrale',
                     'Dossier technique complet',
@@ -453,8 +453,8 @@ export function Home() {
                     'Suivi de chantier',
                     'Réception des travaux',
                   ].map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-primary-foreground/80">
-                      <CheckCircle2 size={14} className="text-white/80 shrink-0" />
+                    <li key={item} className="flex items-center gap-2 text-sm text-primary-foreground/80">
+                      <CheckCircle2 size={12} className="text-white/80 shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -466,7 +466,7 @@ export function Home() {
             </AnimatedSection>
           </div>
 
-          <AnimatedSection className="text-center mt-10">
+          <AnimatedSection className="text-center mt-7">
             <Link
               to="/methode"
               className="inline-flex items-center gap-3 text-primary text-sm tracking-wide group"
@@ -496,75 +496,64 @@ export function Home() {
             <div className="w-16 h-px bg-secondary mx-auto mt-6" />
           </AnimatedSection>
 
-          <div className="relative">
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-6 md:gap-4">
-              {[
-                'Rencontre & cahier des charges',
-                'Écoute et compréhension du projet',
-                'Relevé précis du bien',
-                'Avant-projet & validation',
-                'Sélection des matériaux, finitions & DQE',
-                'Plans d\'exécution & plans de détails',
-                'Consultation, analyse des devis & planification',
-                'Suivi de chantier, réception & levée de réserves',
-              ].map((step, i, arr) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 28 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.55, delay: i * 0.09 + 0.25, ease: [0.23, 1, 0.32, 1] }}
-                  className="group text-center cursor-default"
-                >
-                  <div className="relative flex flex-col items-center">
-                    {/* Demi-lignes qui contournent le cercle — visibles uniquement md+ */}
-                    {i > 0 && (
-                      <motion.div
-                        className="hidden md:block absolute top-8 h-px bg-secondary/50"
-                        style={{ left: 0, right: 'calc(50% + 34px)' }}
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: i * 0.09 + 0.2, ease: 'easeOut' }}
-                      />
-                    )}
-                    {i < arr.length - 1 && (
-                      <motion.div
-                        className="hidden md:block absolute top-8 h-px bg-secondary/50"
-                        style={{ left: 'calc(50% + 34px)', right: 0 }}
-                        initial={{ scaleX: 0 }}
-                        whileInView={{ scaleX: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: i * 0.09 + 0.35, ease: 'easeOut' }}
-                      />
-                    )}
-                    {/* Pulse ring */}
-                    <motion.div
-                      className="absolute top-0 w-16 h-16 rounded-full border border-secondary/50 pointer-events-none"
-                      initial={{ scale: 1, opacity: 0.7 }}
-                      whileInView={{ scale: 1.6, opacity: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.9, delay: i * 0.09 + 0.5, ease: 'easeOut' }}
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } } }}
+          >
+            {[
+              'Rencontre & cahier des charges',
+              'Écoute et compréhension du projet',
+              'Relevé précis du bien',
+              'Avant-projet & validation',
+              'Sélection des matériaux, finitions & DQE',
+              'Plans d\'exécution & plans de détails',
+              'Consultation, analyse des devis & planification',
+              'Suivi de chantier, réception & levée de réserves',
+            ].map((step, i, arr) => (
+              <motion.div
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, y: 24 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.23, 1, 0.32, 1] } },
+                }}
+                className="group text-center cursor-default"
+              >
+                <div className="relative flex flex-col items-center">
+                  {/* Demi-ligne gauche — pas en début de rangée */}
+                  {i > 0 && i % 4 !== 0 && (
+                    <div
+                      className="hidden md:block absolute top-10 h-px bg-secondary/50"
+                      style={{ left: 0, right: 'calc(50% + 42px)' }}
                     />
-                    {/* Circle */}
-                    <motion.div
-                      className="w-16 h-16 rounded-full border-2 border-primary/20 bg-[#F5F0E8] flex items-center justify-center mb-4 relative z-10 group-hover:border-secondary transition-all duration-300"
-                      whileHover={{ scale: 1.12 }}
-                      transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                  )}
+                  {/* Demi-ligne droite — pas en fin de rangée */}
+                  {i < arr.length - 1 && (i + 1) % 4 !== 0 && (
+                    <div
+                      className="hidden md:block absolute top-10 h-px bg-secondary/50"
+                      style={{ left: 'calc(50% + 42px)', right: 0 }}
+                    />
+                  )}
+                  {/* Circle */}
+                  <motion.div
+                    className="w-20 h-20 rounded-full border-2 border-primary/20 bg-[#F5F0E8] flex items-center justify-center mb-4 relative z-10 group-hover:border-secondary transition-all duration-300"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 18 }}
+                  >
+                    <span
+                      className="text-primary/50 group-hover:text-secondary transition-colors duration-300"
+                      style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.7rem', fontWeight: 300 }}
                     >
-                      <span
-                        className="text-primary/50 group-hover:text-secondary transition-colors duration-300"
-                        style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.4rem', fontWeight: 300 }}
-                      >
-                        {i + 1}
-                      </span>
-                    </motion.div>
-                    <p className="text-[10px] tracking-wide text-foreground/60 leading-tight text-center group-hover:text-foreground/90 transition-colors duration-300">{step}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+                      {i + 1}
+                    </span>
+                  </motion.div>
+                  <p className="text-xs tracking-wide text-foreground/65 leading-snug text-center group-hover:text-foreground/90 transition-colors duration-300">{step}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
@@ -648,7 +637,7 @@ export function Home() {
                 Basée à Valbonne, AD Concept intervient principalement dans les <strong className="text-primary font-normal">Alpes-Maritimes (06)</strong>, le <strong className="text-primary font-normal">Var (83)</strong>, <strong className="text-primary font-normal">Monaco</strong> et l'arrière-pays.
               </p>
               <p className="text-foreground/70 text-sm leading-relaxed mb-3">
-                Des projets à <strong className="text-primary font-normal">Paris</strong>, <strong className="text-primary font-normal">Bruxelles</strong> et dans d'autres villes européennes sont possibles — selon la nature du projet, le niveau d'implication souhaité et la relation établie avec le client.
+                Des projets à <strong className="text-primary font-normal">Paris</strong>, <strong className="text-primary font-normal">Bruxelles</strong> et dans d'autres villes européennes sont possibles, selon la nature du projet, le niveau d'implication souhaité et la relation établie avec le client.
               </p>
               <p className="text-foreground/60 text-xs italic mt-4">
                 Les villes ci-contre sont indicatives, pas une liste fermée. Chaque projet se discute.
@@ -665,7 +654,12 @@ export function Home() {
                   { city: 'Nice',         to: '/architecte-interieur-nice' },
                   { city: 'Monaco',       to: '/architecte-interieur-monaco' },
                   { city: 'Saint-Tropez', to: '/architecte-interieur-saint-tropez' },
-                  { city: 'Grasse',       to: '/architecte-interieur-grasse' },
+                  { city: 'Grasse',         to: '/architecte-interieur-grasse' },
+                  { city: 'Fréjus',         to: '/architecte-interieur-frejus' },
+                  { city: 'Hyères',         to: '/architecte-interieur-hyeres' },
+                  { city: 'Grimaud',        to: '/architecte-interieur-grimaud' },
+                  { city: 'Sainte-Maxime',  to: '/architecte-interieur-sainte-maxime' },
+                  { city: 'Sanary-sur-Mer', to: '/architecte-interieur-sanary' },
                 ].map((item) => (
                   <Link
                     key={item.city}
@@ -675,7 +669,7 @@ export function Home() {
                     {item.city}
                   </Link>
                 ))}
-                {['Paris', 'Bruxelles', 'Europe…'].map((city) => (
+                {['Paris', 'Bruxelles', 'Europe'].map((city) => (
                   <span
                     key={city}
                     className="px-5 py-2 border border-dashed border-border text-foreground/40 rounded-full text-xs tracking-wide italic"

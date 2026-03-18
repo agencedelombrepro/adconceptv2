@@ -62,6 +62,26 @@ export const router = createBrowserRouter([
         path: 'architecte-interieur-grasse',
         element: <CityPage cityName="Grasse" slug="grasse" />,
       },
+      {
+        path: 'architecte-interieur-frejus',
+        element: <CityPage cityName="Fréjus" slug="frejus" />,
+      },
+      {
+        path: 'architecte-interieur-hyeres',
+        element: <CityPage cityName="Hyères" slug="hyeres" />,
+      },
+      {
+        path: 'architecte-interieur-grimaud',
+        element: <CityPage cityName="Grimaud" slug="grimaud" />,
+      },
+      {
+        path: 'architecte-interieur-sainte-maxime',
+        element: <CityPage cityName="Sainte-Maxime" slug="sainte-maxime" />,
+      },
+      {
+        path: 'architecte-interieur-sanary',
+        element: <CityPage cityName="Sanary-sur-Mer" slug="sanary" />,
+      },
       { path: '*', Component: NotFound },
     ],
   },

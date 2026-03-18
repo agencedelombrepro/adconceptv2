@@ -139,9 +139,9 @@ function InputField({
 }
 
 function ChoiceCard({
-  label, value, selected, onClick, multi = false
+  label, selected, onClick
 }: {
-  label: string; value: string; selected: boolean; onClick: () => void; multi?: boolean
+  label: string; value?: string; selected: boolean; onClick: () => void; multi?: boolean
 }) {
   return (
     <motion.button
@@ -286,7 +286,7 @@ export function Contact() {
 
                 {/* Logo */}
                 <div>
-                  <LogoAD color="#364025" size={52} />
+                  <LogoAD variant="dark" size={52} />
                 </div>
 
                 <div className="h-px bg-[#364025]/12" />
@@ -335,7 +335,7 @@ export function Contact() {
                       </div>
                       <div>
                         <p className="text-[10px] tracking-wider text-[#5A4E38]/60 uppercase mb-1">Horaires</p>
-                        <p className="text-sm text-[#1C1C1C]/75">Lun-Ven : 9h - 18h</p>
+                        <p className="text-sm text-[#1C1C1C]/75">Lun-Ven : 8h – 18h</p>
                       </div>
                     </li>
                   </ul>

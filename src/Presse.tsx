@@ -96,9 +96,9 @@ const pressArticles = [
   },
   {
     id: 5,
-    media: 'Supplément Côte d\'Azur',
+    media: 'Supplément Côte d\'Azur & Corse',
     issue: '',
-    year: '2023',
+    year: '2014',
     category: 'Art de vivre & Design',
     headline: 'L\'art de transformer les espaces',
     subheadline: 'Christine Thémélidis — Architecture-Design-Concept',
@@ -119,7 +119,7 @@ const pressArticles = [
 /* ── Logos médias partenaires ── */
 const mediaLogos = [
   { name: 'Perspective', tagline: 'Magazine architecture & design', issues: '3 parutions' },
-  { name: 'Supplément Côte d\'Azur', tagline: 'Art de vivre sur la Riviera', issues: '1 parution' },
+  { name: 'Supplément Côte d\'Azur & Corse', tagline: 'Art de vivre sur la Riviera', issues: '1 parution' },
   { name: 'Nice-Matin', tagline: 'Presse régionale', issues: 'À venir' },
   { name: 'Architectures PACA', tagline: 'Revue professionnelle', issues: 'À venir' },
 ]
@@ -127,7 +127,7 @@ const mediaLogos = [
 /* ── Citations clés ── */
 const keyQuotes = [
   {
-    text: "Dans le prestigieux quartier de la Californie, Christine Thémélidis signe une rénovation d'exception où chaque détail — du marbre aux boiseries — témoigne d'un savoir-faire rare.",
+    text: "Dans le prestigieux quartier de la Californie, Christine Thémélidis signe une rénovation d'exception où chaque détail, du marbre aux boiseries, témoigne d'un savoir-faire rare.",
     source: 'Rédaction Perspective',
     media: 'Perspective N°38',
   },
@@ -262,8 +262,13 @@ function ArticleModal({ article, onClose }: { article: typeof pressArticles[0]; 
             <div>
               {/* Badge média */}
               <div className="flex items-center gap-3 mb-6">
-                <PerspectiveBadge dark />
-                <span className="text-[#5A4E38]/60 text-[10px] tracking-[0.4em] uppercase">{article.issue} · {article.year}</span>
+                <span
+                  className="tracking-[0.35em] uppercase font-light text-[11px] text-[#364025]"
+                  style={{ fontFamily: 'Cormorant Garamond, serif' }}
+                >
+                  {article.media}
+                </span>
+                <span className="text-[#5A4E38]/60 text-[10px] tracking-[0.4em] uppercase">{article.issue}{article.issue ? ' · ' : ''}{article.year}</span>
               </div>
 
               <p className="text-[10px] tracking-[0.5em] uppercase text-[#5A4E38] mb-3">{article.category}</p>
@@ -474,7 +479,12 @@ function ArticleCard({ article, index, onOpen }: { article: typeof pressArticles
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
         <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
-          <PerspectiveBadge />
+          <span
+            className="tracking-[0.25em] uppercase font-light text-[9px] text-[#F5F0E8] truncate max-w-[60%]"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+          >
+            {article.media}
+          </span>
           <span className="text-white/80 text-[10px] tracking-wider">{article.year}</span>
         </div>
         {/* Overlay "voir galerie" */}
@@ -484,7 +494,7 @@ function ArticleCard({ article, index, onOpen }: { article: typeof pressArticles
       </div>
 
       {/* Galerie vignettes */}
-      {gallery && gallery.length > 0 && (
+      {gallery && gallery.length > 1 && (
         <div className="flex gap-1 px-2 pt-2 overflow-x-auto">
           {gallery.slice(0, 5).map((src, i) => (
             <div key={i} className="shrink-0 w-14 h-10 overflow-hidden rounded-sm">
@@ -724,7 +734,7 @@ export function Presse() {
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pressArticles.map((article, i) => (
               <ArticleCard key={article.id} article={article} index={i} onOpen={() => setSelectedArticle(article)} />
             ))}
@@ -816,7 +826,7 @@ export function Presse() {
                 Un savoir-faire reconnu,<br /><em>au service de votre projet</em>
               </h2>
               <p className="text-[#5A4E38]/70 text-sm leading-relaxed mb-10 max-w-lg mx-auto">
-                Ces publications témoignent d'une exigence constante et d'une vision affirmée de l'architecture d'intérieur. Confiez-nous votre projet — nous vous apportons la même rigueur, la même attention au détail.
+                Ces publications témoignent d'une exigence constante et d'une vision affirmée de l'architecture d'intérieur. Confiez-nous votre projet : nous vous apportons la même rigueur, la même attention au détail.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

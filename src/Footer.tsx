@@ -1,17 +1,22 @@
 import { Link } from 'react-router'
-import { Instagram, Facebook, MapPin, Mail } from 'lucide-react'
+import { Instagram, Facebook, MapPin, Mail, Star } from 'lucide-react'
 import { LogoAD } from './LogoAD'
 
 export function Footer() {
   const cityLinks = [
-    { to: '/architecte-interieur-valbonne',     label: 'Valbonne' },
-    { to: '/architecte-interieur-cannes',        label: 'Cannes' },
-    { to: '/architecte-interieur-mougins',       label: 'Mougins' },
-    { to: '/architecte-interieur-antibes',       label: 'Antibes' },
-    { to: '/architecte-interieur-nice',          label: 'Nice' },
-    { to: '/architecte-interieur-monaco',        label: 'Monaco' },
-    { to: '/architecte-interieur-saint-tropez',  label: 'Saint-Tropez' },
-    { to: '/architecte-interieur-grasse',        label: 'Grasse' },
+    { to: '/architecte-interieur-valbonne',      label: 'Valbonne' },
+    { to: '/architecte-interieur-cannes',         label: 'Cannes' },
+    { to: '/architecte-interieur-mougins',        label: 'Mougins' },
+    { to: '/architecte-interieur-antibes',        label: 'Antibes' },
+    { to: '/architecte-interieur-nice',           label: 'Nice' },
+    { to: '/architecte-interieur-monaco',         label: 'Monaco' },
+    { to: '/architecte-interieur-saint-tropez',   label: 'Saint-Tropez' },
+    { to: '/architecte-interieur-grasse',         label: 'Grasse' },
+    { to: '/architecte-interieur-frejus',         label: 'Fréjus' },
+    { to: '/architecte-interieur-hyeres',         label: 'Hyères' },
+    { to: '/architecte-interieur-grimaud',        label: 'Grimaud' },
+    { to: '/architecte-interieur-sainte-maxime',  label: 'Sainte-Maxime' },
+    { to: '/architecte-interieur-sanary',         label: 'Sanary-sur-Mer' },
   ]
 
   return (
@@ -30,7 +35,7 @@ export function Footer() {
           {/* Brand avec logo */}
           <div>
             <div className="mb-5 flex flex-col gap-2">
-              <LogoAD color="#F5F0E8" size={52} />
+              <LogoAD variant="light" size={52} />
               <span className="text-[#F5F0E8] text-base"
                 style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400, letterSpacing: '0.25em' }}>
                 AD CONCEPT
@@ -41,7 +46,7 @@ export function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/adconcept_design/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram AD Concept"
@@ -50,13 +55,22 @@ export function Footer() {
                 <Instagram size={13} />
               </a>
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/adconceptCT/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook AD Concept"
                 className="w-9 h-9 border border-[#F5F0E8]/20 rounded-full flex items-center justify-center hover:border-[#F5F0E8]/60 hover:bg-[#F5F0E8]/10 transition-all duration-300"
               >
                 <Facebook size={13} />
+              </a>
+              <a
+                href="https://share.google/O08iqBTt9AIhj93b3"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Avis Google AD Concept"
+                className="w-9 h-9 border border-[#F5F0E8]/20 rounded-full flex items-center justify-center hover:border-[#F5F0E8]/60 hover:bg-[#F5F0E8]/10 transition-all duration-300"
+              >
+                <Star size={13} />
               </a>
             </div>
           </div>
@@ -86,18 +100,18 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Zones */}
-          <div>
+          {/* Zones — 2 colonnes */}
+          <div className="lg:col-span-1">
             <h4 className="text-[10px] tracking-[0.35em] uppercase text-[#F5F0E8]/70 mb-6">Zones d'intervention</h4>
-            <ul className="space-y-3">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-2">
               {cityLinks.map((link) => (
                 <li key={link.to}>
                   <Link
                     to={link.to}
-                    className="text-sm text-[#F5F0E8]/65 hover:text-[#F5F0E8] transition-colors flex items-center gap-2 group"
+                    className="text-xs text-[#F5F0E8]/60 hover:text-[#F5F0E8] transition-colors flex items-center gap-1.5 group"
                   >
-                    <MapPin size={9} className="text-[#F5F0E8]/70 shrink-0" />
-                    Architecte d'intérieur {link.label}
+                    <MapPin size={8} className="text-[#F5F0E8]/50 shrink-0" />
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -134,7 +148,7 @@ export function Footer() {
             {/* Zone */}
             <div className="mt-6 pt-5 border-t border-[#F5F0E8]/10">
               <p className="text-[10px] text-[#F5F0E8]/45 leading-relaxed">
-                Intervient dans un rayon de 100 km : Cannes, Nice, Monaco, Saint-Tropez…
+                Intervient principalement sur la Côte d'Azur (06 · 83 · Monaco), et ponctuellement en Europe selon les projets, notamment Paris, Bruxelles et au-delà.
               </p>
             </div>
           </div>

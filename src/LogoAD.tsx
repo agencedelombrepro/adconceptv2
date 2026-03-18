@@ -5,10 +5,11 @@ interface LogoADProps {
   variant?: 'dark' | 'light'
 }
 
-export function LogoAD({ size = 48, className = '' }: LogoADProps) {
+export function LogoAD({ size = 48, className = '', variant }: LogoADProps) {
+  const src = variant === 'light' ? '/ad-concept-blanc.png' : '/ADClogoPNGclair.png'
   return (
     <img
-      src="/ad-concept-blanc.png"
+      src={src}
       alt="AD Concept — Architecture d'intérieur"
       width={size}
       height={size}

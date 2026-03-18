@@ -14,7 +14,7 @@ const steps = [
   {
     number: '02',
     title: 'Écoute et compréhension du projet',
-    description: 'Je prends le temps de comprendre votre mode de vie, vos habitudes, vos aspirations. Le projet se construit à partir de vous — pas d\'une vision imposée.',
+    description: 'Je prends le temps de comprendre votre mode de vie, vos habitudes, vos aspirations. Le projet se construit à partir de vous, pas d\'une vision imposée.',
     icon: Users,
   },
   {
@@ -26,7 +26,7 @@ const steps = [
   {
     number: '04',
     title: 'Avant-projet & validation',
-    description: 'Plusieurs pistes de conception (APS) vous sont soumises. Chaque option est discutée jusqu\'à validation de la direction finale — avec vous, pas pour vous.',
+    description: 'Plusieurs pistes de conception (APS) vous sont soumises. Chaque option est discutée jusqu\'à validation de la direction finale, avec vous, pas pour vous.',
     icon: Shield,
   },
   {
@@ -38,7 +38,7 @@ const steps = [
   {
     number: '06',
     title: 'Plans d\'exécution & plans de détails',
-    description: 'Dossier technique complet : plans d\'exécution, coupes, élévations, plans de détails. Ce dossier est la colonne vertébrale du chantier — il prévient les mauvaises surprises.',
+    description: 'Dossier technique complet : plans d\'exécution, coupes, élévations, plans de détails. Ce dossier est la colonne vertébrale du chantier, il prévient les mauvaises surprises.',
     icon: Ruler,
   },
   {
@@ -53,6 +53,16 @@ const steps = [
     description: 'Présence terrain, réunions de chantier, contrôle qualité. Si une découverte impose un ajustement, je réagis vite. Réception avec PV et levée de réserves pour clôturer en bonne et due forme.',
     icon: CheckCircle2,
   },
+]
+
+const milestones = [
+  { year: '2006', event: 'Création d\'AD Concept à Valbonne' },
+  { year: '2008', event: 'Premiers projets de villas sur la Côte d\'Azur' },
+  { year: '2009', event: 'Partenariat et collaboration durable avec des marchands de biens, toujours en cours' },
+  { year: '2013', event: 'Première parution dans la presse spécialisée' },
+  { year: '2019', event: 'Extension de la zone d\'intervention en Europe' },
+  { year: '2024', event: 'Plus de 200 projets réalisés' },
+  { year: '2026', event: '20 années d\'accompagnement : nouvelle identité, même exigence' },
 ]
 
 const engagements = [
@@ -100,10 +110,10 @@ export function Methode() {
               <h2 className="text-primary mb-6">Une méthode éprouvée en 20 ans d'exercice</h2>
               <div className="space-y-4 text-foreground/70 leading-relaxed">
                 <p>
-                  Chaque projet — rénovation, réhabilitation ou construction — est unique. Pourtant, la méthode qui garantit sa réussite obéit à une logique constante : analyse, conception, préparation, exécution.
+                  Chaque projet est unique, qu'il s'agisse de rénovation, de réhabilitation ou de construction. Pourtant, la méthode qui garantit sa réussite obéit à une logique constante : écoute, analyse, conception, préparation, exécution.
                 </p>
                 <p>
-                  En tant que maître d'œuvre assurée, je suis le fil directeur de votre projet, de la première réunion jusqu'à la remise des clés. Mon rôle est de vous protéger des risques et de vous offrir une expérience sereine.
+                  En tant que maître d'œuvre assurée, je suis le fil directeur de votre projet, de la première réunion jusqu'à la remise des clés. Mon rôle est de vous protéger des risques et de vous offrir une expérience sereine et un univers qui correspond à vos attentes.
                 </p>
               </div>
             </AnimatedSection>
@@ -142,7 +152,7 @@ export function Methode() {
               <div className="p-8 border border-border h-full">
                 <span className="text-xs tracking-[0.3em] uppercase text-secondary block mb-4">Mission partielle</span>
                 <h3 className="text-primary text-2xl mb-4" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  Conception complète
+                  Mission de conception
                 </h3>
                 <p className="text-foreground/70 text-sm mb-6 leading-relaxed">
                   Idéal pour les clients souhaitant piloter eux-mêmes le chantier tout en bénéficiant d'une conception professionnelle et d'un dossier technique rigoureux.
@@ -163,7 +173,7 @@ export function Methode() {
                 <div className="absolute -right-20 -bottom-20 w-64 h-64 rounded-full bg-white/5" />
                 <span className="text-xs tracking-[0.3em] uppercase text-white/60 block mb-4 relative z-10">Mission complète</span>
                 <h3 className="text-white text-2xl mb-4 relative z-10" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  Conception & maîtrise d'œuvre
+                  Mission complète : conception & maîtrise d'œuvre
                 </h3>
                 <p className="text-white/70 text-sm mb-6 leading-relaxed relative z-10">
                   En tant que maître d'œuvre assurée, je suis responsable du bon déroulement du chantier et du respect des engagements définis en amont.
@@ -215,6 +225,38 @@ export function Methode() {
                     </p>
                   </div>
                 </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Frise chronologique */}
+      <section className="py-14 bg-background">
+        <div className="container mx-auto px-6 lg:px-12">
+          <AnimatedSection className="text-center mb-12">
+            <span className="text-xs tracking-[0.4em] uppercase text-secondary block mb-4">Histoire</span>
+            <h2 className="text-primary">20 ans sur la Côte d'Azur</h2>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+            {milestones.map((m, i) => (
+              <AnimatedSection key={i} delay={i * 0.07}>
+                <div className={`p-6 h-full group transition-colors duration-300 ${
+                  m.year === '2026' ? 'bg-primary text-primary-foreground' : 'bg-background hover:bg-primary/5'
+                }`}>
+                  <span
+                    className={`block text-4xl mb-4 ${m.year === '2026' ? 'text-white/30' : 'text-secondary/25'}`}
+                    style={{ fontFamily: 'Cormorant Garamond, serif', lineHeight: 1 }}
+                  >
+                    {m.year}
+                  </span>
+                  <div className={`w-6 h-px mb-3 transition-all duration-300 group-hover:w-10 ${
+                    m.year === '2026' ? 'bg-white/40' : 'bg-secondary/50'
+                  }`} />
+                  <p className={`text-sm leading-relaxed ${m.year === '2026' ? 'text-white/80' : 'text-foreground/70'}`}>
+                    {m.event}
+                  </p>
+                </div>
               </AnimatedSection>
             ))}
           </div>

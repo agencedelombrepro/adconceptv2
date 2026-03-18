@@ -11,9 +11,12 @@ export function Realisations() {
   const [activeFilter, setActiveFilter] = useState('Tous')
   const [selectedId, setSelectedId] = useState<number | null>(null)
 
+  const allReal = projects.filter(p => !(p as any).comingSoon)
+  const upcoming = projects.filter(p => (p as any).comingSoon)
+
   const filtered = activeFilter === 'Tous'
-    ? projects
-    : projects.filter(p =>
+    ? allReal
+    : allReal.filter(p =>
         p.category.toLowerCase().includes(activeFilter.toLowerCase()) ||
         p.tags.some(t => t.toLowerCase().includes(activeFilter.toLowerCase()))
       )
@@ -79,7 +82,7 @@ export function Realisations() {
       </div>
 
       {/* Projects Grid */}
-      <div className="container mx-auto px-6 lg:px-12 py-10">
+      <div className="container mx-auto px-6 lg:px-12 py-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeFilter}
@@ -87,16 +90,16 @@ export function Realisations() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5"
           >
             {filtered.map((project, i) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08, duration: 0.5 }}
+                transition={{ delay: i * 0.06, duration: 0.5 }}
                 className="group relative cursor-pointer overflow-hidden"
-                style={{ aspectRatio: '4/3' }}
+                style={{ aspectRatio: '3/4' }}
                 onClick={() => openProject(project.id)}
               >
                 {/* Image */}
@@ -147,6 +150,32 @@ export function Realisations() {
           </motion.div>
         </AnimatePresence>
       </div>
+
+      {/* Projets à venir — grisés, non cliquables */}
+      {upcoming.length > 0 && (
+        <div className="container mx-auto px-6 lg:px-12 pb-8">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-4">Projets en cours</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+            {upcoming.map((project) => (
+              <div
+                key={project.id}
+                className="relative overflow-hidden grayscale opacity-40 cursor-default"
+                style={{ aspectRatio: '4/3' }}
+              >
+                <img src={project.image} alt="" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-[10px] tracking-[0.4em] uppercase text-white/60 mb-1">{project.category} · {project.location}</p>
+                  <h3 className="text-white text-xl" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 400 }}>{project.title}</h3>
+                </div>
+                <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1">
+                  <span className="text-[10px] tracking-[0.3em] uppercase text-white/70">Bientôt</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Project detail modal */}
       <ProjectModal

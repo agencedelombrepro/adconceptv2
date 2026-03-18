@@ -14,7 +14,7 @@ const values = [
   },
   {
     title: 'Anticipation',
-    description: 'Un dossier technique rigoureux en amont, c\'est la garantie d\'un chantier mieux maîtrisé — moins d\'imprévus, moins de stress, plus de sérénité.',
+    description: 'Un dossier technique rigoureux en amont, c\'est la garantie d\'un chantier mieux maîtrisé : moins d\'imprévus, moins de stress, plus de sérénité.',
   },
   {
     title: 'Engagement',
@@ -25,11 +25,11 @@ const values = [
 const timeline = [
   { year: '2006', event: 'Création d\'AD Concept à Valbonne' },
   { year: '2008', event: 'Premiers projets de villas sur la Côte d\'Azur' },
-  { year: '2009', event: 'Partenariat avec des marchands de biens' },
-  { year: '2014', event: 'Première parution dans la presse spécialisée (Perspective)' },
-  { year: '2019', event: 'Extension de la zone d\'intervention à 100 km' },
-  { year: '2024', event: 'Plus de 200 projets réalisés — 20 ans d\'expertise' },
-  { year: '2026', event: '20 années d\'accompagnement — nouvelle identité, même exigence' },
+  { year: '2009', event: 'Partenariat et collaboration durable avec des marchands de biens, toujours en cours' },
+  { year: '2013', event: 'Première parution dans la presse spécialisée' },
+  { year: '2019', event: 'Extension de la zone d\'intervention en Europe' },
+  { year: '2024', event: 'Plus de 200 projets réalisés' },
+  { year: '2026', event: '20 années d\'accompagnement : nouvelle identité, même exigence' },
 ]
 
 export function APropos() {
@@ -76,9 +76,9 @@ export function APropos() {
       </div>
 
       {/* Intro portrait */}
-      <section className="py-14 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-5 gap-12 items-start">
+          <div className="grid lg:grid-cols-5 gap-10 items-start">
             {/* Portrait — réduit de ~30% */}
             <AnimatedSection className="lg:col-span-2" direction="left">
               <div className="relative max-w-[70%]">
@@ -106,9 +106,9 @@ export function APropos() {
             <AnimatedSection className="lg:col-span-3" direction="right">
               <h2 className="text-primary mb-6">Depuis 2006, chaque projet est une aventure menée ensemble.</h2>
 
-              <div className="space-y-4 text-foreground/70 leading-relaxed mb-8">
+              <div className="space-y-4 text-foreground/70 leading-relaxed mb-6">
                 <p>
-                  Rénovation, réhabilitation, construction, maîtrise d'œuvre — depuis 2006, j'accompagne particuliers et professionnels dans des projets sur mesure dans les Alpes-Maritimes et au-delà.
+                  Depuis 2006, j'accompagne particuliers et professionnels dans des projets sur mesure dans les Alpes-Maritimes et au-delà : rénovation, réhabilitation, construction, maîtrise d'œuvre.
                 </p>
                 <p>
                   Ce qui me distingue, c'est d'abord une relation client forte. Avant de concevoir quoi que ce soit, je prends le temps de comprendre ce que vous vivez, comment vous habitez, ce que vous projetez. Les attentes réelles, pas les attentes supposées.
@@ -119,15 +119,15 @@ export function APropos() {
               </div>
 
               {/* Quote */}
-              <div className="bg-primary/5 p-6 border-l-4 border-secondary mb-8">
+              <div className="bg-primary/5 p-5 border-l-4 border-secondary mb-6">
                 <Quote size={20} className="text-secondary mb-3" />
                 <p className="text-primary text-lg italic leading-relaxed" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  « Un projet de rénovation ou de construction, c'est avant tout une aventure commune. Mon engagement : comprendre, anticiper, et construire avec vous — pas pour vous. »
+                  « Un projet de rénovation ou de construction, c'est avant tout une aventure commune. Mon engagement : comprendre, anticiper, et construire avec vous, pas pour vous. »
                 </p>
                 <p className="text-muted-foreground text-xs mt-3 tracking-wider">— Christine Thémélidis</p>
               </div>
 
-              <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-3 gap-4 mb-6">
                 {[
                   { number: '20+', label: 'Ans d\'expérience' },
                   { number: '200+', label: 'Projets réalisés' },
@@ -147,9 +147,9 @@ export function APropos() {
       </section>
 
       {/* Values */}
-      <section className="py-14 bg-primary/5">
+      <section className="py-10 bg-primary/5">
         <div className="container mx-auto px-6 lg:px-12">
-          <AnimatedSection className="text-center mb-10">
+          <AnimatedSection className="text-center mb-8">
             <span className="text-xs tracking-[0.4em] uppercase text-secondary block mb-4">Mes valeurs</span>
             <h2 className="text-primary">L'excellence au service de votre espace</h2>
           </AnimatedSection>
@@ -178,9 +178,9 @@ export function APropos() {
       </section>
 
       {/* Timeline */}
-      <section className="py-14 bg-background">
+      <section className="py-10 bg-background">
         <div className="container mx-auto px-6 lg:px-12">
-          <AnimatedSection className="mb-10">
+          <AnimatedSection className="mb-8">
             <span className="text-xs tracking-[0.4em] uppercase text-secondary block mb-4">Parcours</span>
             <h2 className="text-primary">20 ans sur la Côte d'Azur</h2>
           </AnimatedSection>
@@ -188,7 +188,7 @@ export function APropos() {
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-border" />
 
-            <div className="space-y-8">
+            <div className="space-y-5">
               {timeline.map((item, i) => (
                 <AnimatedSection key={i} delay={i * 0.1} direction="left">
                   <div className="flex gap-8 items-center pl-8 relative">
@@ -205,19 +205,22 @@ export function APropos() {
         </div>
       </section>
 
-      {/* Presse mention */}
-      <section className="py-12 bg-primary text-center relative overflow-hidden">
+      {/* CTA contact */}
+      <section className="py-10 bg-primary text-center relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <AnimatedSection>
-            <p className="text-white/60 text-xs tracking-[0.4em] uppercase mb-4">Presse spécialisée</p>
-            <p className="text-primary-foreground/70 text-sm max-w-xl mx-auto mb-8">
-              Projets parus dans la presse spécialisée et plateformes professionnelles. Une reconnaissance de la qualité et de l'originalité des réalisations AD Concept.
+            <p className="text-white/60 text-xs tracking-[0.4em] uppercase mb-4">Votre projet</p>
+            <h2 className="text-primary-foreground text-3xl mb-4" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 300 }}>
+              Parlons de votre projet
+            </h2>
+            <p className="text-primary-foreground/70 text-sm max-w-md mx-auto mb-8">
+              Décrivez-nous votre besoin et obtenez une réponse personnalisée sous 4 jours ouvrés.
             </p>
             <Link
-              to="/realisations"
-              className="inline-flex items-center gap-3 border border-secondary/50 text-primary-foreground px-8 py-4 text-xs tracking-[0.2em] uppercase hover:bg-secondary/20 transition-colors duration-300"
+              to="/contact"
+              className="inline-flex items-center gap-3 bg-secondary text-white px-8 py-4 text-xs tracking-[0.2em] uppercase hover:bg-secondary/80 transition-colors duration-300"
             >
-              Voir les réalisations
+              Discuter de mon projet
               <ArrowRight size={14} />
             </Link>
           </AnimatedSection>

@@ -41,7 +41,7 @@ export function Header() {
     : isHome
     ? 'bg-transparent py-4'
     : 'bg-[#F5F0E8]/97 backdrop-blur-sm py-3 shadow-sm'
-  const logoColor = textLight ? '#FFFFFF' : '#364025'
+
 
   return (
     <>
@@ -61,7 +61,7 @@ export function Header() {
                 transition={{ duration: 0.3 }}
               >
                 <LogoAD
-                  color={logoColor}
+                  variant={textLight ? 'light' : 'dark'}
                   size={isScrolled ? 38 : 44}
                 />
               </motion.div>
@@ -165,7 +165,7 @@ export function Header() {
               transition={{ delay: 0.1, duration: 0.5 }}
               className="mb-10"
             >
-              <LogoAD color="#364025" size={56} />
+              <LogoAD variant="dark" size={56} />
             </motion.div>
 
             <div className="relative z-10 flex flex-col items-center gap-4 w-full px-10">
