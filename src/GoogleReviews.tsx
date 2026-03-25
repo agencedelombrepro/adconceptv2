@@ -5,6 +5,27 @@ import { AnimatedSection } from './AnimatedSection'
 
 const reviews = [
   {
+    name: 'ChouChou Charif Lo Cicero',
+    rating: 5,
+    date: 'mars 2026',
+    text: 'Ce fut une collaboration extraordinaire avec Christine Thémélidis. Je vous recommande Christine pour tous vos projets. D\'ailleurs j\'ai hâte de recommencer un nouveau projet avec elle et son équipe.',
+    initials: 'CC',
+  },
+  {
+    name: 'Thierry Smadja',
+    rating: 5,
+    date: 'novembre 2025',
+    text: 'Christine nous a accompagné pour notre résidence secondaire de la conception du projet à sa réalisation. Tout au long de sa mission elle a été extrêmement à l\'écoute de nos attentes.',
+    initials: 'TS',
+  },
+  {
+    name: 'André Bacquet',
+    rating: 5,
+    date: 'mars 2026',
+    text: 'Excellente accompagnement de Christine lors de la rénovation, modernisation de notre résidence du Sud. Elle sait parfaitement passer ses idées tout en respectant votre propre projet.',
+    initials: 'AB',
+  },
+  {
     name: 'Doris Bürki',
     rating: 5,
     date: 'décembre 2025',
