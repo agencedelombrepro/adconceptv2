@@ -81,30 +81,6 @@ const pressArticles = [
     ],
   },
   {
-    id: 3,
-    media: 'Perspective',
-    issue: 'N° 31',
-    year: '2014',
-    category: 'Villa & Maîtrise d\'œuvre',
-    headline: 'Rencontre édifiante',
-    subheadline: 'Villa contemporaine — Roquefort-les-Pins',
-    excerpt:
-      "Christine Thémélidis et un architecte DPLG forment un tandem constructif autour d'une villa des années 70 à Roquefort-les-Pins. Structure imposante avec débord en porte-à-faux, toiture monopente, grandes baies vitrées et terrasse avec piscine. Une rénovation complète incarnant leur concept : Écoute – Adaptation – Détails.",
-    image: '/projects/roquefort/roquefort-2.jpg',
-    color: '#5A4E38',
-    featured: false,
-    stats: { surface: '300 m²', location: 'Roquefort-les-Pins', mission: 'Maîtrise d\'œuvre' },
-    pdfUrl: '/presse/perspective-n31.pdf',
-    readUrl: 'https://www.magazine-perspective.com',
-    gallery: [
-      '/projects/roquefort/roquefort-1.jpg',
-      '/projects/roquefort/roquefort-2.jpg',
-      '/projects/roquefort/roquefort-3.jpg',
-      '/projects/roquefort/roquefort-4.jpg',
-      '/projects/roquefort/roquefort-5.jpg',
-    ],
-  },
-  {
     id: 6,
     media: 'Perspective',
     issue: 'N° 45',
@@ -129,6 +105,30 @@ const pressArticles = [
       "/DUPLEX CANNOIS ARCHITECTE INTERIEUR CANNES6.png",
       "/DUPLEX CANNOIS ARCHITECTE INTERIEUR CANNES7.png",
       "/DUPLEX CANNOIS ARCHITECTE INTERIEUR CANNES8.png",
+    ],
+  },
+  {
+    id: 3,
+    media: 'Perspective',
+    issue: 'N° 31',
+    year: '2014',
+    category: 'Villa & Maîtrise d\'œuvre',
+    headline: 'Rencontre édifiante',
+    subheadline: 'Villa contemporaine — Roquefort-les-Pins',
+    excerpt:
+      "Christine Thémélidis et un architecte DPLG forment un tandem constructif autour d'une villa des années 70 à Roquefort-les-Pins. Structure imposante avec débord en porte-à-faux, toiture monopente, grandes baies vitrées et terrasse avec piscine. Une rénovation complète incarnant leur concept : Écoute – Adaptation – Détails.",
+    image: '/projects/roquefort/roquefort-2.jpg',
+    color: '#5A4E38',
+    featured: false,
+    stats: { surface: '300 m²', location: 'Roquefort-les-Pins', mission: 'Maîtrise d\'œuvre' },
+    pdfUrl: '/presse/perspective-n31.pdf',
+    readUrl: 'https://www.magazine-perspective.com',
+    gallery: [
+      '/projects/roquefort/roquefort-1.jpg',
+      '/projects/roquefort/roquefort-2.jpg',
+      '/projects/roquefort/roquefort-3.jpg',
+      '/projects/roquefort/roquefort-4.jpg',
+      '/projects/roquefort/roquefort-5.jpg',
     ],
   },
   {
@@ -705,7 +705,7 @@ export function Presse() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { n: '4', label: 'Articles publiés' },
+              { n: '5', label: 'Articles publiés' },
               { n: '2', label: 'Magazines différents' },
               { n: '20+', label: 'Années d\'expertise' },
               { n: '100%', label: 'Projets sur mesure' },

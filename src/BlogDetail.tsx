@@ -50,7 +50,7 @@ const articles = [
       <p>Un chantier implique de nombreux corps de métier : maçons, plombiers, électriciens, menuisiers, carreleurs, peintres... Chacun intervient à un moment précis, et chaque défaillance ou décalage peut bloquer les autres. Le maître d'œuvre établit un planning d'intervention coordonné et s'assure que chaque intervenant dispose des informations nécessaires.</p>
 
       <h2>Contrôle qualité permanent</h2>
-      <p>Le maître d'œuvre organise des réunions de chantier, assiste aux réunions de chantier, vérifie la conformité et l'adaptation des travaux avec les plans et les documents techniques. Il signale les non-conformités avant qu'elles ne deviennent des problèmes coûteux, pour vérifier et pour discuter des travaux à venir, anticiper leur mise en œuvre et planifier leur exécution.</p>
+      <p>Le maître d'œuvre organise des réunions de chantier pour discuter des travaux à venir, anticiper leur mise en œuvre et planifier leur exécution afin de vérifier la conformité et l'adaptation des travaux avec les plans et les documents techniques. Il signale les non-conformités avant qu'elles ne deviennent des problèmes coûteux.</p>
 
       <h2>Maîtrise du budget</h2>
       <p>Grâce à un dossier technique complet et à une consultation rigoureuse des entreprises, le maître d'œuvre vous permet d'obtenir des devis comparables et d'éviter les avenants imprévus.</p>
