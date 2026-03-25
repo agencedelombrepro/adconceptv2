@@ -155,7 +155,7 @@ export function Home() {
                 textShadow: '0 4px 32px rgba(0,0,0,0.55), 0 1px 8px rgba(0,0,0,0.4)',
               }}
             >
-              Architecte & <em>Maître d'œuvre</em>
+              <em>Architecte & Maître d'œuvre</em>
             </motion.h1>
           </div>
 
@@ -283,13 +283,13 @@ export function Home() {
               </h2>
               <div className="space-y-4 text-foreground/70 leading-relaxed">
                 <p>
-                  Un intérieur réussi ne repose pas uniquement sur une esthétique. Il repose sur une compréhension précise de vos attentes, de votre mode de vie et des contraintes techniques du lieu.
+                  Un intérieur réussi ne repose pas uniquement sur une esthétique. Il se base sur une compréhension précise de vos attentes, de votre mode de vie et des contraintes techniques du lieu.
                 </p>
                 <p>
                   Chez AD Concept, chaque projet commence par une phase d'analyse approfondie : relevé du bien, étude des volumes, identification des contraintes structurelles et budgétaires.
                 </p>
                 <p className="text-primary font-medium italic" style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '1.2rem' }}>
-                  « Je ne propose pas d'intérieur catalogue. Je conçois des espaces cohérents, fonctionnels et durables. »
+                  « Je ne propose pas d'intérieur catalogue. Je conçois des espaces cohérents, personnalisés, fonctionnels et durables. »
                 </p>
               </div>
               <div className="mt-8">

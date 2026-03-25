@@ -10,7 +10,7 @@ const values = [
   },
   {
     title: 'Adaptation',
-    description: 'Je ne construis pas une vision pour me faire plaisir. Chaque projet se construit avec vous, à partir de ce que vous êtes et de ce que vous vivez.',
+    description: 'Ma vision n\'est pas faite pour me satisfaire, mais pour vous servir. Chaque projet naît de qui vous êtes et de ce dont vous avez réellement besoin.',
   },
   {
     title: 'Anticipation',
@@ -111,10 +111,10 @@ export function APropos() {
                   Depuis 2006, j'accompagne particuliers et professionnels dans des projets sur mesure dans les Alpes-Maritimes et au-delà : rénovation, réhabilitation, construction, maîtrise d'œuvre.
                 </p>
                 <p>
-                  Ce qui me distingue, c'est d'abord une relation client forte. Avant de concevoir quoi que ce soit, je prends le temps de comprendre ce que vous vivez, comment vous habitez, ce que vous projetez. Les attentes réelles, pas les attentes supposées.
+                  Ce qui me distingue, c'est d'abord une relation client forte. Avant de concevoir quoi que ce soit, je prends le temps de comprendre ce que vous vivez, comment vous habitez, ce que vous projetez. Avant toute conception, je m'immerge dans votre quotidien pour comprendre vos usages, votre manière de vivre et vos aspirations. Vos attentes réelles, et non les supposées.
                 </p>
                 <p>
-                  Chaque chantier est anticipé en amont avec rigueur : un dossier technique solide, une sélection des entreprises exigeante, une planification réaliste. Cette préparation, c'est ce qui vous évite les mauvaises surprises et me permet d'être pleinement à vos côtés jusqu'à la réception.
+                  Chaque chantier est anticipé en amont avec rigueur : un dossier technique solide, une sélection des entreprises exigeante, une planification réaliste. Cette préparation évite les mauvaises surprises et me permet d'être pleinement à vos côtés jusqu'à la réception.
                 </p>
               </div>
 
@@ -122,7 +122,7 @@ export function APropos() {
               <div className="bg-primary/5 p-5 border-l-4 border-secondary mb-6">
                 <Quote size={20} className="text-secondary mb-3" />
                 <p className="text-primary text-lg italic leading-relaxed" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  « Un projet de rénovation ou de construction, c'est avant tout une aventure commune. Mon engagement : comprendre, anticiper, et construire avec vous, pas pour vous. »
+                  « Un projet de rénovation ou de construction, c'est avant tout une aventure commune. Mon engagement : comprendre, anticiper, et construire avec vous, et pour vous. »
                 </p>
                 <p className="text-muted-foreground text-xs mt-3 tracking-wider">— Christine Thémélidis</p>
               </div>

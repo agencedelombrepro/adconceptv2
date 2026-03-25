@@ -10,7 +10,7 @@ const articles = [
     date: '12 janvier 2026',
     readTime: '5 min',
     excerpt: "La réussite d'un chantier de rénovation à Cannes repose en grande partie sur sa préparation. Qu'il s'agisse d'un appartement en centre-ville ou d'une villa, l'anticipation des contraintes techniques et budgétaires est essentielle.",
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80&fit=crop',
+    image: "/renovation-monaco.jpg",
     slug: 'preparer-chantier-renovation-cannes',
     content: `
       <p>La rénovation d'un bien immobilier à Cannes (appartement en centre-ville, villa sur les hauteurs ou résidence proche du bord de mer) nécessite une organisation rigoureuse en amont. Trop souvent, les propriétaires sous-estiment le temps et les ressources nécessaires à une bonne préparation.</p>
@@ -41,22 +41,22 @@ const articles = [
     image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80&fit=crop',
     slug: 'pourquoi-maitrise-oeuvre-essentielle',
     content: `
-      <p>Vous avez un projet de rénovation ou de construction ? Vous vous demandez si la maîtrise d'œuvre est vraiment nécessaire ? Après 20 ans de projets dans les Alpes-Maritimes, voici mon point de vue.</p>
+      <p>Vous avez un projet de rénovation ou de construction ? Vous vous demandez si un Maître d'Oeuvre est vraiment nécessaire ? Après 20 ans de projets dans les Alpes-Maritimes, voici mon point de vue.</p>
 
       <h2>Qu'est-ce que la maîtrise d'œuvre ?</h2>
-      <p>Le maître d'œuvre est le professionnel qui assure la conception et le suivi technique d'un projet de construction ou de rénovation. Il est l'intermédiaire entre le maître d'ouvrage (vous, le client) et les entreprises qui réalisent les travaux.</p>
+      <p>Le maître d'œuvre est le professionnel assuré en garantie décennale qui assume la conception et le suivi technique d'un projet de construction ou de rénovation. Il est l'intermédiaire entre le maître d'ouvrage (vous, le client) et les entreprises qui réalisent les travaux dont il a la responsabilité.</p>
 
       <h2>Coordination des corps de métier</h2>
-      <p>Un chantier implique de nombreux corps de métier : maçons, plombiers, électriciens, menuisiers, carreleurs, peintres... Chacun intervient à un moment précis, et le moindre décalage peut bloquer les autres. Le maître d'œuvre établit un planning d'intervention coordonné et s'assure que chaque corps de métier dispose des informations nécessaires.</p>
+      <p>Un chantier implique de nombreux corps de métier : maçons, plombiers, électriciens, menuisiers, carreleurs, peintres... Chacun intervient à un moment précis, et chaque défaillance ou décalage peut bloquer les autres. Le maître d'œuvre établit un planning d'intervention coordonné et s'assure que chaque intervenant dispose des informations nécessaires.</p>
 
       <h2>Contrôle qualité permanent</h2>
-      <p>Le maître d'œuvre assiste aux réunions de chantier, vérifie la conformité des travaux avec les plans et les documents techniques, et signale les non-conformités avant qu'elles ne deviennent des problèmes coûteux.</p>
+      <p>Le maître d'œuvre organise des réunions de chantier, assiste aux réunions de chantier, vérifie la conformité et l'adaptation des travaux avec les plans et les documents techniques. Il signale les non-conformités avant qu'elles ne deviennent des problèmes coûteux, pour vérifier et pour discuter des travaux à venir, anticiper leur mise en œuvre et planifier leur exécution.</p>
 
       <h2>Maîtrise du budget</h2>
       <p>Grâce à un dossier technique complet et à une consultation rigoureuse des entreprises, le maître d'œuvre vous permet d'obtenir des devis comparables et d'éviter les avenants imprévus.</p>
 
       <h2>Réception des travaux</h2>
-      <p>À la fin du chantier, le maître d'œuvre procède à la réception des travaux avec vous. Il dresse la liste des réserves (défauts à corriger) et s'assure que les entreprises les lèvent dans les délais prévus.</p>
+      <p>À la fin du chantier, le maître d'œuvre procède à la réception des travaux avec vous. Il dresse la liste des réserves (défauts à corriger) et s'assure que les entreprises les lèvent dans les délais prévus. Une opération qui permettra de solder les entreprises et de devenir propriétaire de l'ouvrage intégral.</p>
     `,
   },
   {

@@ -12,7 +12,7 @@ const articles = [
     date: '12 janvier 2026',
     readTime: '5 min',
     excerpt: 'La réussite d\'un chantier de rénovation à Cannes repose en grande partie sur sa préparation. Qu\'il s\'agisse d\'un appartement en centre-ville ou d\'une villa, l\'anticipation des contraintes techniques et budgétaires est essentielle.',
-    image: '/gallia-3.jpg',
+    image: "/renovation-monaco.jpg",
     slug: 'preparer-chantier-renovation-cannes',
     featured: true,
   },
