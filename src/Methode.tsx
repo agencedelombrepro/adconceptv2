@@ -113,7 +113,7 @@ export function Methode() {
                   Chaque projet est unique, qu'il s'agisse de rénovation, de réhabilitation ou de construction. Pourtant, la méthode qui garantit sa réussite obéit à une logique constante : écoute, analyse, conception, préparation, exécution.
                 </p>
                 <p>
-                  En tant que maître d'œuvre assurée, je suis le fil directeur de votre projet, de la première réunion jusqu'à la remise des clés. Mon rôle est de vous protéger des risques et de vous offrir une expérience sereine et un univers qui correspond à vos attentes.
+                  En tant que maître d'œuvre assurée, je suis le fil directeur de votre projet, de la première réunion jusqu'à la remise des clés. Mon rôle est de vous protéger des risques, de vous offrir une expérience sereine et un univers qui correspond à vos attentes.
                 </p>
               </div>
             </AnimatedSection>
