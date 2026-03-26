@@ -92,6 +92,7 @@ export function Home() {
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0])
   const [activeImage, setActiveImage] = useState(0)
+  const [videoPlaying, setVideoPlaying] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -385,25 +386,38 @@ export function Home() {
           </div>
 
           <AnimatedSection className="mt-10">
-            <div className="relative overflow-hidden bg-black rounded-sm">
-              <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+            <div className="relative overflow-hidden bg-black" style={{ aspectRatio: '16/9' }}>
+              {videoPlaying ? (
                 <iframe
-                  src="https://www.youtube.com/embed/-Sk52y3SjE4?autoplay=1&mute=1&loop=1&playlist=-Sk52y3SjE4&controls=0&modestbranding=1&rel=0"
+                  src="https://www.youtube.com/embed/-Sk52y3SjE4?autoplay=1&rel=0&modestbranding=1"
                   title="Villa contemporaine — Roquefort-les-Pins"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
                 />
-              </div>
-              <div className="flex items-center justify-between px-5 py-3 bg-black/80">
-                <div>
-                  <p className="text-white text-sm italic" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Villa contemporaine — Roquefort-les-Pins</p>
-                  <p className="text-white/50 text-[9px] tracking-wide mt-0.5">© 3mille.com — Image & Communication · <a href="https://www.3mille.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">www.3mille.com</a></p>
-                </div>
-                <Link to="/realisations" className="shrink-0 flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-[10px] tracking-[0.2em] uppercase px-4 py-2 hover:bg-white/25 transition-colors">
-                  Voir les réalisations <ArrowRight size={11} />
-                </Link>
-              </div>
+              ) : (
+                <button
+                  className="absolute inset-0 w-full h-full group"
+                  onClick={() => setVideoPlaying(true)}
+                  aria-label="Lancer la vidéo"
+                >
+                  <img
+                    src="https://img.youtube.com/vi/-Sk52y3SjE4/maxresdefault.jpg"
+                    alt="Villa contemporaine — Roquefort-les-Pins"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                    <div className="w-16 h-16 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg viewBox="0 0 24 24" fill="white" className="w-6 h-6 ml-1"><polygon points="5,3 19,12 5,21"/></svg>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-white text-base italic" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Villa contemporaine — Roquefort-les-Pins</p>
+                      <p className="text-white/50 text-[9px] tracking-wide mt-1">© 3mille.com — Image & Communication · <a href="https://www.3mille.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors" onClick={e => e.stopPropagation()}>www.3mille.com</a></p>
+                    </div>
+                  </div>
+                </button>
+              )}
             </div>
           </AnimatedSection>
 
