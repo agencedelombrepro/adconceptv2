@@ -384,7 +384,31 @@ export function Home() {
             ))}
           </div>
 
-          <AnimatedSection className="text-center mt-12">
+          <AnimatedSection className="mt-10">
+            <div className="relative overflow-hidden bg-black rounded-sm">
+              <video
+                src="/projects/roquefort/roquefort-video.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full object-cover"
+                style={{ maxHeight: '480px' }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
+                <div>
+                  <p className="text-white text-sm italic" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Villa contemporaine — Roquefort-les-Pins</p>
+                  <p className="text-white/50 text-[9px] tracking-wide mt-0.5">© 3mille.com — Image & Communication · <a href="https://www.3mille.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">www.3mille.com</a></p>
+                </div>
+                <Link to="/realisations" className="shrink-0 flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white text-[10px] tracking-[0.2em] uppercase px-4 py-2 hover:bg-white/25 transition-colors">
+                  Voir les réalisations <ArrowRight size={11} />
+                </Link>
+              </div>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection className="text-center mt-8">
             <Link
               to="/realisations"
               className="inline-flex items-center gap-3 border border-primary text-primary px-8 py-4 text-xs tracking-[0.2em] uppercase hover:bg-primary hover:text-primary-foreground transition-all duration-300"

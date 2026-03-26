@@ -59,6 +59,8 @@ export const projects = [
     budget: 'Sur demande',
     duration: '18 mois',
     pressArticle: { media: 'Perspective', issue: 'N° 31', pdfUrl: '/presse/perspective-n31.pdf' },
+    video: '/projects/roquefort/roquefort-video.mp4',
+    videoCredit: '© 3mille.com — Image & Communication · Sophia Antipolis · www.3mille.com',
     gallery: [
       '/projects/roquefort/roquefort-1.jpg',
       '/projects/roquefort/roquefort-2.jpg',
