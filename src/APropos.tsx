@@ -108,13 +108,13 @@ export function APropos() {
 
               <div className="space-y-4 text-foreground/70 leading-relaxed mb-6">
                 <p>
-                  Depuis 2006, j'accompagne particuliers et professionnels dans des projets sur mesure dans les Alpes-Maritimes et au-delà : rénovation, réhabilitation, construction, maîtrise d'œuvre.
+                  Depuis 2006, j'accompagne particuliers et professionnels dans des projets sur mesure dans les Alpes-Maritimes et au-delà : rénovation, réhabilitation, construction, en  maîtrise d'œuvre.
                 </p>
                 <p>
-                  Ce qui me distingue, c'est d'abord une relation client forte. Avant de concevoir quoi que ce soit, je prends le temps de comprendre ce que vous vivez, comment vous habitez, ce que vous projetez. Avant toute conception, je m'immerge dans votre quotidien pour comprendre vos usages, votre manière de vivre et vos aspirations. Vos attentes réelles, et non les supposées.
+                  Ce qui me distingue, c'est avant tout la qualité de la relation que je construis avec mes clients. Avant même de concevoir, je prends le temps de comprendre votre mode de vie, vos habitudes, vos envies et vos projections. Je m'immerge dans votre quotidien pour mieux vous connaître et saisir vos véritables aspirations. Vos attentes réelles, et non les supposées.
                 </p>
                 <p>
-                  Chaque chantier est anticipé en amont avec rigueur : un dossier technique solide, une sélection des entreprises exigeante, une planification réaliste. Cette préparation évite les mauvaises surprises et me permet d'être pleinement à vos côtés jusqu'à la réception.
+                  Chaque projet est préparé avec rigueur en amont : un dossier technique solide, une sélection exigeante des entreprises partenaires et une planification réaliste. Cette anticipation limite les imprévus et me permet de vous accompagner sereinement à chaque étape, jusqu'à la réception du chantier.
                 </p>
               </div>
 

@@ -14,7 +14,7 @@ const steps = [
   {
     number: '02',
     title: 'Écoute et compréhension du projet',
-    description: 'Je prends le temps de comprendre votre mode de vie, vos habitudes, vos aspirations. Le projet se construit à partir de vous, pas d\'une vision imposée.',
+    description: 'Je prends le temps de comprendre votre mode de vie, vos habitudes, vos aspirations. Le projet se construit à partir de vous, et non d\'une vision imposée.',
     icon: Users,
   },
   {
@@ -26,7 +26,7 @@ const steps = [
   {
     number: '04',
     title: 'Avant-projet & validation',
-    description: 'Plusieurs pistes de conception (APS) vous sont soumises. Chaque option est discutée jusqu\'à validation de la direction finale, avec vous, pas pour vous.',
+    description: 'Plusieurs pistes de conception (APS) vous sont soumises. Chaque option est discutée jusqu\'à validation de la direction finale, avec vous.',
     icon: Shield,
   },
   {
@@ -38,7 +38,7 @@ const steps = [
   {
     number: '06',
     title: 'Plans d\'exécution & plans de détails',
-    description: 'Dossier technique complet : plans d\'exécution, coupes, élévations, plans de détails. Ce dossier est la colonne vertébrale du chantier, il prévient les mauvaises surprises.',
+    description: 'Dossier technique complet : plans d\'exécution, coupes, élévations, plans de détails. Ce dossier est la colonne vertébrale du chantier, il anticipe les mauvaises surprises.',
     icon: Ruler,
   },
   {
