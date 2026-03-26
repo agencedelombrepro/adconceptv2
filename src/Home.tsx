@@ -386,17 +386,16 @@ export function Home() {
 
           <AnimatedSection className="mt-10">
             <div className="relative overflow-hidden bg-black rounded-sm">
-              <video
-                src="/projects/roquefort/roquefort-video.mp4"
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full object-cover"
-                style={{ maxHeight: '480px' }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-              <div className="absolute bottom-4 left-5 right-5 flex items-end justify-between">
+              <div style={{ position: 'relative', paddingBottom: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/-Sk52y3SjE4?autoplay=1&mute=1&loop=1&playlist=-Sk52y3SjE4&controls=0&modestbranding=1&rel=0"
+                  title="Villa contemporaine — Roquefort-les-Pins"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 'none' }}
+                />
+              </div>
+              <div className="flex items-center justify-between px-5 py-3 bg-black/80">
                 <div>
                   <p className="text-white text-sm italic" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Villa contemporaine — Roquefort-les-Pins</p>
                   <p className="text-white/50 text-[9px] tracking-wide mt-0.5">© 3mille.com — Image & Communication · <a href="https://www.3mille.com" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition-colors">www.3mille.com</a></p>

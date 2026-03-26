@@ -254,13 +254,22 @@ export function ProjectModal({ project, onClose, onPrev, onNext, hasPrev, hasNex
                     {(project as any).video && (
                       <div className="mb-6">
                         <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-2">Vidéo du projet</p>
-                        <div className="relative overflow-hidden bg-black">
-                          <video
-                            src={(project as any).video}
-                            controls
-                            className="w-full"
-                            style={{ maxHeight: '200px', objectFit: 'cover' }}
-                          />
+                        <div className="relative overflow-hidden bg-black" style={{ paddingBottom: '56.25%' }}>
+                          {(project as any).videoType === 'youtube' ? (
+                            <iframe
+                              src={(project as any).video}
+                              title="Vidéo du projet"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                              className="absolute inset-0 w-full h-full"
+                            />
+                          ) : (
+                            <video
+                              src={(project as any).video}
+                              controls
+                              className="absolute inset-0 w-full h-full"
+                            />
+                          )}
                         </div>
                         {(project as any).videoCredit && (
                           <p className="text-[9px] text-muted-foreground/60 mt-1 italic">{(project as any).videoCredit}</p>
