@@ -175,17 +175,41 @@ export function Methode() {
                 <h3 className="text-white text-2xl mb-4 relative z-10" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   Mission complète : conception & maîtrise d'œuvre
                 </h3>
-                <p className="text-white/70 text-sm mb-6 leading-relaxed relative z-10">
-                  En tant que maître d'œuvre assurée, je suis responsable du bon déroulement du chantier et du respect des engagements définis en amont.
-                </p>
-                <ul className="space-y-2 relative z-10">
-                  {['Conception intégrale', 'Dossier technique complet', 'Consultation des entreprises', 'Planification des travaux', 'Coordination des corps d\'état', 'Suivi de chantier régulier', 'Réception des travaux'].map(item => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-white/85">
-                      <CheckCircle2 size={12} className="text-white/90 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="space-y-4 relative z-10">
+                  <div>
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-white/50 mb-2">Phase 1 — Conception</p>
+                    <ul className="space-y-1.5">
+                      {[
+                        'Relevé de l\'état des lieux, plans DWG et PDF',
+                        'Plans finalisés du projet',
+                        'Plans électriques et techniques',
+                        'Propositions et choix des matériaux',
+                        'Descriptif des travaux par corps d\'état',
+                        'Chiffrages précis des travaux',
+                      ].map(item => (
+                        <li key={item} className="flex items-center gap-2 text-sm text-white/85">
+                          <CheckCircle2 size={12} className="text-white/90 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-[10px] tracking-[0.25em] uppercase text-white/50 mb-2">Phase 2 — Maîtrise d'œuvre</p>
+                    <ul className="space-y-1.5">
+                      {[
+                        'Signatures des contrats et marchés',
+                        'Définition du planning et de la livraison',
+                        'Suivi de chantier & rapports de réunion',
+                      ].map(item => (
+                        <li key={item} className="flex items-center gap-2 text-sm text-white/85">
+                          <CheckCircle2 size={12} className="text-white/90 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </AnimatedSection>
           </div>
