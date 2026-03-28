@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
+import { useMeta } from './useMeta'
 import { Filter, ArrowUpRight } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
 import { ProjectModal } from './ProjectModal'
@@ -8,6 +9,10 @@ import { projects } from './projects'
 const filters = ['Tous', 'Villa', 'Appartement', 'Rénovation', 'Conception']
 
 export function Realisations() {
+  useMeta(
+    "Réalisations — Architecture d'intérieur & Maîtrise d'œuvre | AD Concept Valbonne",
+    "Découvrez les projets de rénovation, construction et architecture d'intérieur réalisés par AD Concept dans les Alpes-Maritimes : villas, appartements, lofts sur mesure."
+  )
   const [activeFilter, setActiveFilter] = useState('Tous')
   const [selectedId, setSelectedId] = useState<number | null>(null)
 

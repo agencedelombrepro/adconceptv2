@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
+import { useMeta } from './useMeta'
 import { Link } from 'react-router'
 import { ArrowRight, Calendar, Clock } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
@@ -54,6 +55,10 @@ const articles = [
 const categories = ['Tous', 'Rénovation', 'Maîtrise d\'œuvre', 'Conseils chantier', 'Architecture d\'intérieur']
 
 export function Blog() {
+  useMeta(
+    "Blog — Conseils rénovation & architecture d'intérieur Côte d'Azur | AD Concept",
+    "Conseils pratiques, guides et retours d'expérience sur la rénovation, la maîtrise d'œuvre et l'architecture d'intérieur dans les Alpes-Maritimes et la Côte d'Azur."
+  )
   const [activeCategory, setActiveCategory] = useState('Tous')
 
   const featured = articles.find(a => a.featured)!

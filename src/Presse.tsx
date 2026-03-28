@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useInView, AnimatePresence } from 'motion/react'
+import { useMeta } from './useMeta'
 import { Quote, BookOpen, Download, X, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router'
 import { AnimatedSection } from './AnimatedSection'
@@ -630,6 +631,10 @@ function MediaLogoCard({ logo, index }: { logo: typeof mediaLogos[0]; index: num
 
 /* ── Page principale ── */
 export function Presse() {
+  useMeta(
+    "Presse — AD Concept dans Perspective Magazine | Christine Thémélidis Valbonne",
+    "Retrouvez les publications sur AD Concept et Christine Thémélidis dans les médias spécialisés : magazine Perspective, Supplément Côte d'Azur."
+  )
   const heroRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '25%'])

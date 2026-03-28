@@ -82,6 +82,10 @@ export const router = createBrowserRouter([
         path: 'architecte-interieur-sanary',
         element: <CityPage cityName="Sanary-sur-Mer" slug="sanary" />,
       },
+      {
+        path: 'architecte-interieur-sophia-antipolis',
+        element: <CityPage cityName="Sophia Antipolis" slug="sophia-antipolis" />,
+      },
       { path: '*', Component: NotFound },
     ],
   },

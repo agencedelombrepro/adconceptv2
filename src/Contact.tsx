@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
+import { useMeta } from './useMeta'
 import { MapPin, Mail, Clock, ArrowRight, ArrowLeft, CheckCircle2, ChevronDown } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
 import { LogoAD } from './LogoAD'
@@ -197,6 +198,10 @@ function ProgressBar({ current, total }: { current: number; total: number }) {
 
 /* ── Page Contact ── */
 export function Contact() {
+  useMeta(
+    "Contact — Architecte & Maître d'œuvre à Valbonne | AD Concept",
+    "Décrivez votre projet à Christine Thémélidis, architecte & maître d'œuvre à Valbonne. Réponse personnalisée sous 4 jours ouvrés. Alpes-Maritimes et Côte d'Azur."
+  )
   const [step, setStep] = useState(1)
   const [form, setForm] = useState<FormData>(INITIAL)
   const [submitted, setSubmitted] = useState(false)

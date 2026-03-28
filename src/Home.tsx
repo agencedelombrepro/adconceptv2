@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform, useInView } from 'motion/react'
 import { useRef, useState, useEffect } from 'react'
+import { useMeta } from './useMeta'
 import { Link } from 'react-router'
 import { ArrowDown, ArrowRight, CheckCircle2, Star, ChevronRight } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
@@ -87,6 +88,10 @@ function Counter({ target }: { target: string }) {
 }
 
 export function Home() {
+  useMeta(
+    "AD Concept — Architecte & Maître d'œuvre à Valbonne",
+    "Christine Thémélidis — Architecte & maître d'œuvre à Valbonne depuis 2006. Rénovation, construction et architecture d'intérieur dans les Alpes-Maritimes. Devis sous 4 jours."
+  )
   const heroRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])

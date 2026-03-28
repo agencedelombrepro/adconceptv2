@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useMeta } from './useMeta'
 import { Link } from 'react-router'
 import { ArrowRight, Award, MapPin, Quote } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
@@ -33,6 +34,10 @@ const timeline = [
 ]
 
 export function APropos() {
+  useMeta(
+    "Christine Thémélidis — Architecte & Maître d'œuvre à Valbonne | AD Concept",
+    "Depuis 2006, Christine Thémélidis accompagne particuliers et professionnels dans leurs projets sur mesure dans les Alpes-Maritimes. Architecture d'intérieur & maîtrise d'œuvre assurée."
+  )
   return (
     <div className="min-h-screen">
       {/* Hero */}

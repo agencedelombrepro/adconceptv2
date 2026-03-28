@@ -2,6 +2,7 @@ import { Link } from 'react-router'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
 import { projects } from './projects'
+import { useMeta } from './useMeta'
 
 interface CityPageProps {
   cityName: string
@@ -20,11 +21,16 @@ const cityImages: Record<string, string> = {
   frejus:          '/frejus-ville.jpg',
   hyeres:          '/hyeres-ville.jpg',
   grimaud:         '/grimaud-ville.jpg',
-  'sainte-maxime': '/sainte-maxime-ville.jpg',
-  sanary:          '/sanary-ville.jpg',
+  'sainte-maxime':   '/sainte-maxime-ville.jpg',
+  sanary:            '/sanary-ville.jpg',
+  'sophia-antipolis':'/sophia-antipolis-ville.jpg',
 }
 
 export function CityPage({ cityName, slug }: CityPageProps) {
+  useMeta(
+    `Architecte d'intérieur à ${cityName} — Rénovation & Maîtrise d'œuvre | AD Concept`,
+    `AD Concept intervient à ${cityName} pour des projets de rénovation, construction et architecture d'intérieur sur mesure. Maître d'œuvre assurée, basée à Valbonne depuis 2006.`
+  )
   const image = cityImages[slug] || cityImages.valbonne
 
   // Projets réels correspondant à cette ville
@@ -249,8 +255,9 @@ export function CityPage({ cityName, slug }: CityPageProps) {
               { city: 'Fréjus',         to: '/architecte-interieur-frejus' },
               { city: 'Hyères',         to: '/architecte-interieur-hyeres' },
               { city: 'Grimaud',        to: '/architecte-interieur-grimaud' },
-              { city: 'Sainte-Maxime',  to: '/architecte-interieur-sainte-maxime' },
-              { city: 'Sanary-sur-Mer', to: '/architecte-interieur-sanary' },
+              { city: 'Sainte-Maxime',    to: '/architecte-interieur-sainte-maxime' },
+              { city: 'Sanary-sur-Mer',  to: '/architecte-interieur-sanary' },
+              { city: 'Sophia Antipolis', to: '/architecte-interieur-sophia-antipolis' },
             ].filter(l => !l.to.includes(slug)).map(link => (
               <Link
                 key={link.city}

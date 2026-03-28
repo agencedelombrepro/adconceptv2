@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router'
 import { ArrowLeft, Calendar, Clock } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
+import { useMeta } from './useMeta'
 
 const articles = [
   {
@@ -117,6 +118,10 @@ const articles = [
 export function BlogDetail() {
   const { slug } = useParams<{ slug: string }>()
   const article = articles.find((a) => a.slug === slug)
+  useMeta(
+    article ? `${article.title} | AD Concept Valbonne` : 'Article | AD Concept',
+    article ? article.excerpt : undefined
+  )
 
   if (!article) {
     return (

@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
+import { useMeta } from './useMeta'
 import { Link } from 'react-router'
 import { ArrowRight, CheckCircle2, Shield, Clock, Users, Ruler } from 'lucide-react'
 import { AnimatedSection } from './AnimatedSection'
@@ -73,6 +74,10 @@ const engagements = [
 ]
 
 export function Methode() {
+  useMeta(
+    "Notre méthode — 8 étapes pour un chantier maîtrisé | AD Concept Valbonne",
+    "De la conception à la réception, découvrez les 8 étapes de la méthode AD Concept pour mener votre projet de rénovation ou construction dans les meilleures conditions."
+  )
   const heroRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
