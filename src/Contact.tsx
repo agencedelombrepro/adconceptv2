@@ -237,9 +237,40 @@ export function Contact() {
     e.preventDefault()
     if (!form.commitment) return
     setLoading(true)
-    await new Promise(r => setTimeout(r, 1800))
-    setLoading(false)
-    setSubmitted(true)
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: '91affb69-e465-4a10-a74c-342f2abc4c1b',
+          subject: `Nouvelle demande de projet — ${form.name}`,
+          from_name: 'AD Concept Site Web',
+          name: form.name,
+          email: form.email,
+          'Ville du projet': form.city || 'Non renseignée',
+          'Type de projet': form.projectType.join(', ') || '-',
+          'Type de bien': form.propertyType || '-',
+          'Surface': form.surface || '-',
+          'Usage': form.projectFor || '-',
+          'Mission': form.mission || '-',
+          'Budget': form.budget || '-',
+          'Calendrier': form.timeline || '-',
+          'Avancement': form.projectStatus || '-',
+          'Description': form.description,
+          'Comment connu': form.howDidYouHear || '-',
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        alert('Une erreur est survenue. Veuillez réessayer ou nous écrire directement à bonjour@adconceptdesign.fr.')
+      }
+    } catch {
+      alert('Une erreur est survenue. Veuillez réessayer ou nous écrire directement à bonjour@adconceptdesign.fr.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const slideVariants = {
